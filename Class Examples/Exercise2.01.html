@@ -1,14 +1,140 @@
 <!doctype html>
  <html>
-  <head> </head>
-  <body>
-  <header>header</header>
-  <nav>nav</nav>
+ <!--  Everything from here --> 
+ <head> 
+    <style>
+        body{
+         width:90%;
+        }
+        header,footer
+        {
+            background-color: #659494;
+            padding: 20px;
+            margin:20px;
+            color: #FFFFFF;
+            text-align: center;
+            border-radius: 5px;
+           
+        }
+       
+     
+        header{
+            position:static;
+            height:100px;
+            width:100%;
+            top:0px;
+        }
 
- <article>article
- </article>
-<aside>aside
-</aside>
+        main{
+            border: black solid 10px;
+            background-color: #659494;
+            padding:5px;
+            display:flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        article{
+            flex-grow:0;
+            flex-shrink:0;
+            flex-basis: 60%;
+            border:#FFFFFF solid 2px;
+        }
+
+        section{
+            background-color: red;
+            margin:1em;
+            flex-basis: 125px;
+        
+        }
+        aside{
+            border:#FFFFFF solid 2px;
+            width:100%;
+        }
+
+
+        footer{
+            clear:both;
+        }
+        
+        .is_static{
+            position:static;
+            left:1200203px;
+        }
+
+        .is_relative{
+            position:relative;
+            top:-10px;
+        }
+
+        .is_absolute{
+            position:absolute;
+            top: -30px;
+        }
+
+        .is_fixed{
+            position:fixed;
+            bottom:75px;
+            right: 20px;
+        }
+
+        .is_sticky{
+            position: sticky;
+            top:0px;
+        }
+
+        nav{
+            width:100%;
+        }
+        ul{
+            list-style: none;
+            display:flex;
+            flex-direction: row;
+            width:100%;
+            background-color: aqua;
+            justify-content: flex-end;
+            
+        }
+        li{
+            margin-left:2rem;
+            background-color: #659494;
+            padding:10px;
+
+        }
+
+    </style>
+ </head>
+<!-- to here isn't really shown to the user-->
+
+  <body>
+    
+  <header>
+    <nav >
+        <ul>
+            <li><a href="../index.html">Home</a> </li>
+            <li><a href="../resume.html">Resume</a> </li>
+            <li><a href="../example_whitepaper.html">White Paper</a> </li>
+            <li><a href="../class5_example.html">Example</a> </li>
+        </ul>
+      </nav>
+    header</header>
+  
+
+  <main>
+    <article>article
+        <section class="is_static">section static</section>
+        <section class="is_relative">section relative</section>
+        <section class="is_absolute">section absolute</section>
+        <section class="is_fixed">Speak with an agent!</section>
+        <section class="is_sticky">section sticky</section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, et tempore quam veritatis ipsum suscipit enim iste cumque at voluptate placeat tempora vero magnam laborum assumenda, quos accusamus veniam recusandae. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit nihil, exercitationem quis animi ut voluptas iusto amet, aut unde sapiente velit dolorum cupiditate assumenda ipsam pariatur ullam odit. Repellat, cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores necessitatibus ad tempora similique, consequuntur officiis dignissimos numquam eum iusto, ipsam eaque quidem blanditiis, est deleniti. Distinctio non tempora nobis pariatur?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, et tempore quam veritatis ipsum suscipit enim iste cumque at voluptate placeat tempora vero magnam laborum assumenda, quos accusamus veniam recusandae. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit nihil, exercitationem quis animi ut voluptas iusto amet, aut unde sapiente velit dolorum cupiditate assumenda ipsam pariatur ullam odit. Repellat, cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores necessitatibus ad tempora similique, consequuntur officiis dignissimos numquam eum iusto, ipsam eaque quidem blanditiis, est deleniti. Distinctio non tempora nobis pariatur?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, et tempore quam veritatis ipsum suscipit enim iste cumque at voluptate placeat tempora vero magnam laborum assumenda, quos accusamus veniam recusandae. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit nihil, exercitationem quis animi ut voluptas iusto amet, aut unde sapiente velit dolorum cupiditate assumenda ipsam pariatur ullam odit. Repellat, cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores necessitatibus ad tempora similique, consequuntur officiis dignissimos numquam eum iusto, ipsam eaque quidem blanditiis, est deleniti. Distinctio non tempora nobis pariatur?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, et tempore quam veritatis ipsum suscipit enim iste cumque at voluptate placeat tempora vero magnam laborum assumenda, quos accusamus veniam recusandae. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit nihil, exercitationem quis animi ut voluptas iusto amet, aut unde sapiente velit dolorum cupiditate assumenda ipsam pariatur ullam odit. Repellat, cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores necessitatibus ad tempora similique, consequuntur officiis dignissimos numquam eum iusto, ipsam eaque quidem blanditiis, est deleniti. Distinctio non tempora nobis pariatur?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, et tempore quam veritatis ipsum suscipit enim iste cumque at voluptate placeat tempora vero magnam laborum assumenda, quos accusamus veniam recusandae. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit nihil, exercitationem quis animi ut voluptas iusto amet, aut unde sapiente velit dolorum cupiditate assumenda ipsam pariatur ullam odit. Repellat, cupiditate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores necessitatibus ad tempora similique, consequuntur officiis dignissimos numquam eum iusto, ipsam eaque quidem blanditiis, est deleniti. Distinctio non tempora nobis pariatur?
+    </article>
+    <aside>aside</aside>
+</main>
+
 <footer>footer</footer>
 
  </body>
