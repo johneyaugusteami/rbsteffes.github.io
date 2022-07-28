@@ -25,7 +25,6 @@
 /* COLORS */
 body{
     background: rgb(241, 237, 237);
-    background: linear-gradient(155deg, rgba(241,237,237,1) 0%, rgba(59,28,87,0.5060399159663865) 85%, rgba(111,111,149,1) 100%);
     
     padding-left: 10%;
     padding-right: 10%;
@@ -46,7 +45,7 @@ header{
     background-repeat:repeat;
     background-size: 100%, auto;
     background-position-x: center, center;
-    background-image: url("../images/pexels-skylar-kang-6045298.jpg"), url("../images/herringbone.png");
+    background: linear-gradient(to left, rgb(59, 28, 87), rgba(59, 28, 87, 0.072)), url("../images/pexels-skylar-kang-6045298.jpg"), url("../images/herringbone.png");
     background-blend-mode: color-dodge;
     box-shadow:0 0 15px 10px #fff ;
 
@@ -75,9 +74,9 @@ main{
 }
 
 footer{
-    color: rgba(59,28,87);
-    backdrop-filter: blur(8.8px);
+    background: linear-gradient(to left, rgba(59,28,87), rgba(59, 28, 87, 0.124)), url("../images/pexels-skylar-kang-6045298.jpg") no-repeat top center;
     background-color: #f1eded;
+    color: rgba(241, 237, 237);
 }
 
 .ExperienceList > li {
@@ -175,6 +174,19 @@ footer{
     justify-content: space-evenly;
 }
 
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+form > * {
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+form > .PersonalInfo {
+    flex-grow: 0;
+    flex-basis: 40em;
+}
 .FormList{
     display: flex;
     flex-direction: column;
