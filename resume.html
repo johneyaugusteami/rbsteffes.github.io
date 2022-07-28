@@ -11,20 +11,27 @@
 <body>
 
    <header>
-      <h1>Ryan Steffes</h1>
+      <nav>
+         <ul>
+            <li>
+               <a href="#" target="_top">Home</a>
+            </li>
+            <li>
+               <span class="ThisPage">Resume</span>
+            </li>
+            <li>
+               <a href="#your_name" target="_top">Contact Me</a>
+            </li>
+         </ul>
+         </nav>
+       <h1>Ryan Steffes</h1>
+      
    </header>
 
    <main>
-      <aside>
+      <aside id="sidebar">
          <section id="AboutMeSec">
-         EMAIL:
-         RBSTEFFES@gmail.com 
-         <h2>Hobbies</h2>
-         <ul id="HobbyList">
-            <li>Photography</li>
-            <li>Fruit and vegetable gardening</li>
-            <li>Exercise (Certified Personal Trainer)</li>
-         </ul>
+         
          <h2>Skills</h2>
          <h3>Software Languages:</h3>
          <ul class="SkillsList">
@@ -50,13 +57,14 @@
             <h2 class="SectionTitle">EDUCATION</h2>
             <ul class="EducationList">
                <li>
+                  <h3>Masters - Educational Media</h3>
                   <p>Appalachian State University, Boone, NC 2021</p>
                   <p>Cratis D. Williams School of Graduate Studies</p>
-                  <p>Masters - Educational Media</p>
+                  
                </li>
                <li>
+                  <h3>Bachelor of Science (Computer Science / Business Information Systems)</h3>
                   <p>Taylor University, Upland, Indiana 2001</p>
-                  <p>Bachelor of Science (Majored in Computer Science and Business Information Systems)</p>
                </li>
             </ul>
          </section>
@@ -69,6 +77,7 @@
                <h3 class="SubSectionTitle">TEACHING-RELATED EXPERIENCE</h3>
                <ul class="ExperienceList">
                   <li>
+                     <img src="images/wt-torch.png" class="RightFloater">
                      <h4 class="JobTitle">Wake Technical Community College (Raleigh, NC)</h4>
                      <h4 class="JobTitle">Adjunct Faculty</h4>
                      <h5 class="EmpDate">June 2019 – Present </h5>
@@ -84,6 +93,7 @@
                      </ul>
                   </li>
                   <li>
+                     <img src="images/measurement-incorporated-squarelogo-1423809634467.png" class="RightFloater">
                      <h4 class="JobTitle">Measurement, Inc (Durham, NC) - Reader, Scorer, Temporary HR</h4>
                      <h5 class="EmpDate">February 2019 – August 2020</h5>
                      <ul class="JobSkillList">
@@ -94,6 +104,7 @@
                      </ul>
                   </li>
                   <li>
+                     <img src="images/magicears.jpg" class="RightFloater">
                      <h4 class="JobTitle">MagicEars (Online, Beijing, China) - ESL Teacher (Independent Contractor)</h4>
                      <h5 class="EmpDate">2019 – 2020</h5>
                      <ul class="JobSkillList">
@@ -104,6 +115,7 @@
                      </ul>
                   </li>
                   <li>
+                     <img src="images/vipkid-Logo_primary.png" class="RightFloater">
                      <h4 class="JobTitle">VIPKIDS (Online, Beijing, China) - Independent Contractor, ESL Teacher</h4>
                      <h5 class="EmpDate">December 2017 – December 2018</h5>
                      <ul class="JobSkillList">
@@ -113,6 +125,8 @@
                   </li>
 
                   <li>
+                     <img src="images/fayettevilletechcc.png" class="RightFloater">
+                     
                      <h4 class="JobTitle">Fayetteville Technical Community College (Fayetteville, NC) - Teacher, Adult Education</h4>
                      <h5 class="EmpDate">April - August 2004</h5>
                      <ul class="JobSkillList">
@@ -123,6 +137,8 @@
                   </li>
 
                   <li>
+                     <img src="images/284162_e0d7ad5d74b2436cbce31588e063e276~mv2.jpg" class="RightFloater">
+                     
                      <h4 class="JobTitle">Fayetteville Christian School (Fayetteville, NC) –Teacher</h4>
                      <h5 class="EmpDate">August 2003 – April 2004</h5>
                      <ul class="JobSkillList">
@@ -217,6 +233,36 @@
    </main>
 
 <footer>
+   <h3>Have a position you think I'd fit?</h3>
+   <form action="#" method="get">
+      <fieldset>
+         <legend>Personal Information</legend>
+         <ul class="FormList">
+            <li class="FormInput">
+               <label for="your_name">Full name:</label>
+               <input id="your_name" name="your_name" type="text">
+            </li>
+            <li class="FormInput">
+               <label for="your_email">Email address:</label>
+               <input id="your_email" name="your_email" type="email">
+            </li>
+            <li class="FormInput">
+               <label for="your_company">Company:</label>
+               <input id="your_company" name="your_company" type="text">
+            </li>
+         </ul>
+      </fieldset>
+      <fieldset>
+         <legend>Position Description:</legend>
+         <ul class="FormList">
+            <li class="FormInput">
+               <label for="your_name">Please enter comments</label>
+               <textarea name="email_comments" ></textarea>
+            </li>
+         </ul>
+      </fieldset>
+      <input type="submit">
+   </form>
 </footer>
 
 </body>

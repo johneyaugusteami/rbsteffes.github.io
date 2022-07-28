@@ -17,6 +17,8 @@
     /* set font here*/
     font-family: 'Ultra', serif;
     font-weight: 100;
+
+
 }
 
 header{
@@ -29,32 +31,118 @@ header{
 
 /* COLORS */
 body{
-    background: rgb(241,237,237);
-    background: linear-gradient(135deg, rgba(241,237,237,1) 0%, rgba(59,28,87,0.5060399159663865) 58%, rgba(111,111,149,1) 100%);
+    background: rgb(241, 237, 237);
+    background: linear-gradient(155deg, rgba(241,237,237,1) 0%, rgba(59,28,87,0.5060399159663865) 85%, rgba(111,111,149,1) 100%);
+    
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 aside, article{
     color:#17191F;
-    background-color: #F1EDED;
-    padding:5px;
-    margin:15px;
+    /* From https://css.glass */
+    background: rgba(198, 190, 190, 0.586);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(8.8px), grayscale(1);
+    border: 1px solid rgba(241, 237, 237, 0.3);
+    
 }
-/* STRUCTURE */
+
+header{
+    background-repeat:repeat;
+    background-size: 100%, auto;
+    background-position-x: center, center;
+    background-image: url("../images/pexels-skylar-kang-6045298.jpg"), url("../images/herringbone.png");
+    background-blend-mode: color-dodge;
+    box-shadow:0 0 15px 10px #fff ;
+
+    color: rgba(59,28,87);
+}
+
+header h1{
+    font-size: 300%;
+}
+
+header a, header .ThisPage{
+    font-size: larger;
+    text-decoration: none;
+    
+}
+header ul{
+    background-color: rgba(198, 190, 190, 0.586);
+    box-shadow: 0px 0px 15px 10px rgba(198, 190, 190, 0.586);
+}
 
 main{
-    padding-left:5vw;
-    padding-right:5vw;
+    background-repeat:repeat;
+    
+    background-image: url("../images/herringbone.png");
+    border-radius: 16px;
+    font-size: larger;
+    
+}
+
+footer{
+    color: rgba(59,28,87);
+    backdrop-filter: blur(8.8px);
+    background-color: #f1eded;
+}
+
+.ExperienceList > li {
+    /* From https://css.glass */
+    background: rgba(105, 146, 190, 0.66);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+    border: 1px solid rgba(241, 237, 237, 0.3);
+    color: #F1EDED;
+    
+    margin:10px;
+}
+
+/* STRUCTURE */
+header{
+    justify-content: flex-start;
+    margin: 2rem;
     display: flex;
     flex-direction: column;
+    padding:10px;
+}
+
+nav{
+    align-self: flex-end;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li{
+    margin: 2em;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:10px;
+    justify-content: space-between;
 }
 aside{
     flex-basis: 25vw;
 }
 
 .ResumeArticle{
-    flex-basis: 70vw;
+    flex-basis: 90vw;
     display: flex;
     flex-direction: column;
+}
+
+aside, article{
+    padding-left:1rem;
+    padding-right: 1rem;
 }
 
 .ExperienceList{
@@ -66,10 +154,13 @@ aside{
 .ExperienceList > li {
     flex-basis: 28%;
     padding:10px;
-    background-color: #6992BE;
-    color: #F1EDED;
-    border-radius: 5px;
-    margin:10px;
+    
+}
+
+.ExperienceList img{
+    margin:.5rem;
+    max-width: 10%;
+    
 }
 
 
@@ -77,6 +168,46 @@ ul{
     list-style: none;
 }
 
+footer{
+    padding:.5rem;
+}
+
 .JobSkillList, .JobSubSkillList{
     list-style-type:disc;
+}
+
+.SkillsList{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.FormList{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.FormInput{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-bottom: 1rem;
+}
+
+.FormInput > label{
+    flex-basis: 10rem;
+}
+
+.FormInput > textarea{
+    width: 100%; 
+    max-width: 100%;
+    
+}
+
+.RightFloater{
+    float: right;
+}
+.LeftFloater{
+    float: left;
 }
