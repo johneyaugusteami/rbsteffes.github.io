@@ -23,20 +23,35 @@
 
 
 /* COLORS */
+:root{
+   --LightColor: #FAF9F8;
+   --LightColorTransparent: rgba(250, 249, 248, 0.275);
+   
+   --LightAccent: rgb(234, 151, 125);
+   --LightAccentTransparent: rgba(234, 151, 125, 0.275);
+
+   --BrandColor: rgb(55, 124, 232);
+   --BrandColorTransparent: rgba(55, 124, 232, 0.275);
+
+   --DarkAccent: rgb(97, 154, 232);
+   --DarkAccentTransparent: rgb(97, 154, 232,.275);
+   
+   --DarkColor: rgb(35, 23, 46);
+   --DarkColorTransparent: rgba(35, 23, 46, .275);
+
+}
+
 body{
-    background: rgb(241, 237, 237);
-    
-    padding-left: 10%;
-    padding-right: 10%;
+    background: var(--LightColor);
 }
 
 aside, article{
     color:#17191F;
     /* From https://css.glass */
-    background: rgba(198, 190, 190, 0.586);
+    background: var(--LightAccentTransparent);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(1.2px);
+    box-shadow: 0 4px 30px var(--LightAccentTransparent);
+    backdrop-filter: blur(3.4px);
     border: 1px solid rgba(241, 237, 237, 0.3);
     
 }
@@ -45,11 +60,10 @@ header{
     background-repeat:repeat;
     background-size: 100%, auto;
     background-position-x: center, center;
-    background: linear-gradient(to left, rgb(59, 28, 87), rgba(59, 28, 87, 0.072)), url("../images/pexels-skylar-kang-6045298.jpg"), url("../images/herringbone.png");
-    background-blend-mode: color-dodge;
-    box-shadow:0 0 15px 10px #fff ;
-
-    color: rgba(59,28,87);
+    background: linear-gradient(to left, var(--BrandColor), var(--LightAccent)), url("../images/herringbone.png"), url("../images/pexels-skylar-kang-6045298.jpg");
+    background-blend-mode: screen;
+    color: var(--DarkAccent);
+    
 }
 
 header h1{
@@ -59,9 +73,19 @@ header h1{
 header a, header .ThisPage{
     font-size: 18px;
     text-decoration: none;
+    color: var(--LightAccentColor);
     
 }
-header ul{
+
+a:link, a:visited{
+    color: var(--LightAccentColor);
+}
+
+
+
+
+header li{
+    padding: 2vh;
     background-color: rgba(198, 190, 190, 0.2);
     backdrop-filter: blur(3px);
 }
@@ -74,9 +98,12 @@ main{
 }
 
 footer{
-    background: linear-gradient(to left, rgba(59,28,87), rgba(59, 28, 87, 0.124)), url("../images/pexels-skylar-kang-6045298.jpg") no-repeat top center;
+    color: var(--BrandColor);
+}
+
+footer form{
+    background: linear-gradient(to top left, var(--DarkAccentTransparent), var(--BrandColorTransparent));
     background-color: #f1eded;
-    color: rgba(241, 237, 237);
 }
 
 .ExperienceList > li {
@@ -84,7 +111,7 @@ footer{
     background: rgba(105, 146, 190, 0.098);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-
+    backdrop-filter: blur(3px);
     border: 1px solid rgba(241, 237, 237, 0.3);
     color: #3e3e3e;
     
@@ -94,11 +121,13 @@ footer{
 /* STRUCTURE */
 header{
     justify-content: center;
-    margin: 2rem;
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
-
     align-items: center;
+    width: auto;
+    padding: 0 10vw 0 10vw;
+    
 }
 
 
@@ -109,6 +138,17 @@ nav{
 nav ul{
     display: flex;
     flex-direction: row;
+}
+
+@media screen and (max-width:600px)
+{
+    nav{
+        align-self: center;
+    }
+    nav ul{
+        flex-direction: column;
+        width:100%;
+    }
 }
 
 nav ul li{
@@ -174,6 +214,12 @@ footer{
     justify-content: space-evenly;
 }
 
+@media screen  and (max-width:640px) {
+    .SkillsList{
+        flex-direction: column;
+    }
+}
+
 form{
     width: 100%;
     display: flex;
@@ -215,4 +261,66 @@ form > .PersonalInfo {
 }
 .LeftFloater{
     float: left;
+}
+
+.IsCard{
+    width: 100%;
+    border-radius: 10px;
+    min-height: 50vh;
+    align-items: center;
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+    backdrop-filter: blur(4px);
+}
+
+.Card1{
+    color:var(--BrandColor);
+    fill: var(--BrandColor);
+    font-family: 'Ultra', serif;
+    font-weight: 700;
+}
+
+.Card2{
+    background-attachment: fixed;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../images/RyanSteffesPhotographer.jpg");
+    
+}
+
+.Card3{
+    background-color: var(--DarkAccent);
+    color: var(--LightColor);
+    font-size: larger;
+    background-attachment: fixed;
+    background-size:cover;
+    background-position: center;
+    background-image: url("../images/pexels-sven-huls-3801347.jpg");
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    
+}
+
+.Card3 ul, .Card3 h4{
+    background-color: var(--DarkAccentTransparent);
+    backdrop-filter: blur(15px);
+    padding: 5%;
+}
+
+.Card3 ul{
+    margin-left: 2vw;
+}
+
+.Card3 li{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.Card3 li label{
+    flex-basis: 50%;
+    flex-shrink: 0;
 }
