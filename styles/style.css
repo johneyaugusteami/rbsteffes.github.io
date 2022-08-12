@@ -66,6 +66,19 @@ header{
     
 }
 
+header h1:hover{
+    font-size:600%;
+    transition-property: font-size;
+    transition-delay: 20ms;
+    transition-duration: 1s;
+}
+
+header h1::before{
+    content: ">";
+}
+header h1::after{
+    content: "<";
+}
 header h1{
     font-size: 300%;
 }
@@ -266,7 +279,7 @@ form > .PersonalInfo {
 .IsCard{
     width: 100%;
     border-radius: 10px;
-    min-height: 50vh;
+    min-height: 75vh;
     align-items: center;
     justify-content: center;
     display:flex;
