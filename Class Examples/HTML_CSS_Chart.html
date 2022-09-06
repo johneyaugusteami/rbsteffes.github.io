@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Cheatsheet for HTML and CSS tags</title>
+        <style>
+            td{
+                text-align: center;
+                
+            }
+            tr{
+                background-color: lightblue;
+            }
+
+            .headingRow{
+                font-size: larger;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                background-color: black;
+                color: lightblue;
+            }
+
+            .headingRow th{
+                border: none;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>These are the HTML Elements to Know</h1>
+        </header>
+        <main>
+            <section>
+                <h2>HTML</h2>
+                <table>
+                    <caption>Useful HTML tags</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">HTML Tag</th>
+                            <th scope="col">When to use</th>
+                            <th scope="col">Is Semantic</th>
+                            <th scope="col">Special Attributes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="headingRow">
+                            <th colspan="4">Inline Objects</th>
+                        </tr>
+                        <tr>
+                            <td>&lt;b&gt;</td>
+                            <td>when things should be bold</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;em&gt;</td>
+                            <td>when things should be emphasized</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;span&gt;</td>
+                            <td>when things need to be selected</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;a&gt;</td>
+                            <td>when things should be linked</td>
+                            <td>no</td>
+                            <td>
+                                <ul>
+                                    <li>href = the address the thing goes to </li>
+                                    <li>target = top is same page, _blank it's new page</li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>&lt;img&gt;</td>
+                            <td>to show images</td>
+                            <td>no</td>
+                            <td>
+                                <ul>
+                                    <li>src = the location of the image</li>
+                                    <li>alt = the <em>USEFUL</em> description of the image</li>                                   </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="headingRow">
+                            <th colspan="4">Block Objects</th>
+                        </tr>
+                        <tr>
+                            <td>&lt;div&gt;</td>
+                            <td>when you need a box</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h2>CSS</h2>
+
+            </section>
+
+        </main>
+    </body>
+</html>

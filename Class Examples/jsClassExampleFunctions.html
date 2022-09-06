@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <script>
+        function counter(someNum)
+        {
+            if(someNum !== undefined && someNum < 10)
+                {
+                    document.write(someNum + "<BR>");
+                    counter(someNum + 1);
+                }
+        }
+
+        counter(0);
+    </script>
+
+</body>
+</html>
