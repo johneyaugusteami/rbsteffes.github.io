@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    
+    <script>
+        (function(){
+            document.write('<button onClick="doSomething(\'So Weird\')">Click me to do something</button>');
+        })();
+        
+
+        function doSomething(){
+
+            document.write(arguments[0]);
+
+        }
+        var doSomethingElse = function(number1, number2)
+        {
+            let myTemp = number1;
+
+            alert("Something Else: ["+number1+"]" 
+                    + "["+ number2 +"]");
+            number1 = number2;
+            number2 = myTemp;
+            myNumber = number1;
+        };
+
+        setTimeout(function(){ alert("This is later");}, 1000);
+        
+        doSomethingElse(myNumber, myNumber+54);
+        var myNumber=0;
+        doSomethingElse();
+        
+
+
+       
+        
+
+    </script>
+</body>
+</html>

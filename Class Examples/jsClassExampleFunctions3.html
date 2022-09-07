@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    
+    <script>
+        
+       function displayHtml()
+       {
+         function isValid(param)
+         {
+            return (param !== undefined);
+         }
+
+         function writeTag(element, isClosing, style, classname, id ){
+            document.write("<" );
+            if(isValid(isClosing) && isClosing)
+            {
+                document.write("/");
+            }
+            if(isValid(element))
+             { 
+                document.write(element);
+             }
+             else{
+                alert("No element");
+                return;
+             }
+             if(isValid(style))
+             {
+                document.write(" style=\'"+style+"\'");
+             }
+             if(isValid(classname))
+             {
+                document.write(" class=\'"+classname+"\'");
+             }
+             if(isValid(id))
+             {
+                document.write(" id=\'"+id+"\'");
+             }
+
+             document.write(">");
+
+         }
+         function writeContent(content)
+         {
+            if(isValid(content))
+                document.write(content);
+         }
+         
+         writeTag("h1", false, "color:red;font-size:59px;");
+         writeContent("Function examples");
+         writeTag("h1", true);
+
+         writeTag("p");
+         writeContent("This is a paragraph");
+         writeTag("p", true);
+
+       }
+
+       displayHtml();
+
+    </script>
+</body>
+</html>

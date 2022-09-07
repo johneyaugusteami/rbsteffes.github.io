@@ -7,7 +7,16 @@
     <script>
         function counter(someNum)
         {
-            if(someNum !== undefined && someNum < 10)
+            function compareNumber(someNum){
+                return (someNum < 10);
+            }
+
+            function isValid(someNum)
+            {
+                return (someNum !==undefined);
+            }
+
+            if(isValid(someNum) && compareNumber(someNum))
                 {
                     document.write(someNum + "<BR>");
                     counter(someNum + 1);
