@@ -164,6 +164,16 @@ nav ul{
     }
 }
 
+@media screen and (min-width:600px)
+{
+    nav::before{
+        content: "********";
+    }
+    nav::after{
+        content: "********";
+    }
+}
+
 nav ul li{
     margin: 2em;
 }
