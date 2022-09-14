@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)https://moonitil.github.io/Projects/loanTable/loans.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <style>
+            tr, th, td{
+                border: solid 1px black;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="https://moonitil.github.io/Projects/loanTable/loans.html">
+            <label for="loanAmount">Loan Amount:</label>
+                <input type="text" name="loanAmount" id="loanAmount">
+            <label for="interestRate">Interest Rate:</label>
+                <input type="text" name="interestRate" id="interestRate">
+            <label for="paymentAmount">Payment Amount:</label>
+                <input type="text" name="paymentAmount" id="paymentAmount">
+            <button type="submit" onclick="createTable()">Submit</button>
+            <script src="js/createTable.js"></script>
+        </form>
+
+        <table id="loanTable"></table>
+    
+</body></html>

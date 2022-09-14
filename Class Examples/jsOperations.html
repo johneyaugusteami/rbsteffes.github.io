@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            label{
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function makeEmail(){
+                var firstName = document.getElementById("FirstName").value.toLowerCase(),
+                    lastName = document.getElementById("LastName").value.toLowerCase(),
+                    email = firstName.charAt(0) + lastName + "@waketech.edu";
+
+            }    
+            var message = "The global message.";
+            function showMessage()
+            {
+                var number = document.getElementById("firstNumber").value,
+                    resultDiv = document.getElementById("jsResults");
+                
+                resultDiv.innerHTML = "<ul>\n";
+                    
+                var index=0;
+                while(index<number)
+                {
+                    resultDiv.innerHTML += "<li>" + index++ + "</li>";
+                }
+
+                resultDiv.innerHTML += "</ul>\n";
+                return false;
+
+            }
+            </script>
+        <form>
+            <label for="FirstName">First Name: </label><input id="FirstName">
+            <label for="LastName">Last Name: </label><input id="LastName">
+            
+            <button style="display: block" onclick="makeEmail();">Generate</button>
+        </form>
+
+    
+            <label for="FirstNum">Number: </label><input id="firstNumber">
+            
+            
+            <button style="display: block" onclick="showMessage();">Generate</button>
+    
+
+        <div id="jsResults"></div>
+       
+    </body>
+</html>

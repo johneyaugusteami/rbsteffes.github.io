@@ -16,10 +16,9 @@
 
          function writeTag(element, isClosing, style, classname, id ){
             document.write("<" );
-            if(isValid(isClosing) && isClosing)
-            {
-                document.write("/");
-            }
+            
+            document.write( (isValid(isClosing) && isClosing)? "/":"");
+            
             if(isValid(element))
              { 
                 document.write(element);
