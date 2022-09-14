@@ -1,0 +1,91 @@
+<html>
+  <body>
+<style>
+.eightball {
+  padding:30px;
+  width: 250px;
+  height: 250px;
+  position:relative;
+  background-color:black;
+  border-radius:50%;
+}
+
+.corner {
+  position:absolute;
+  width: 0; 
+	height: 0; 
+  top:90px;
+	border-top: 150px solid #0000aa;
+	border-bottom: 150px solid transparent;
+  transform: rotate(45deg);
+	border-right: 150px solid transparent;
+  
+}
+
+.corner span {
+  position:absolute;
+  top: -100px;
+  width: 100px;
+  left: 5px;
+  text-align: center;
+  font-size: 16px;
+  font-family: arial;
+  transform: rotate(-45deg);
+  display:block;
+  color:white;
+  
+}
+
+
+.shake{
+  animation-name: shake;
+  animation-iteration-count: 32;
+  animation-duration: 20ms;
+  
+}
+
+@keyframes shake{
+  0%{ top:100px; left:10px;}
+  20%{ top:-50px; left:0px;}
+  75%{ top:50px; left:10px;}
+  100%{ top:-10px; left:-10px;}
+}
+</style>
+
+<script>
+  var fortunes = [
+    "Try again.",
+    "YES!",
+    "Always!",
+    "Definitely",
+    "Fo sho",
+    "No."
+  ];
+  var curFortune = 0;
+
+  function shake(){
+  var magicBall = document.querySelector(".eightball");
+  console.log(magicBall);
+  magicBall.classList.remove("shake");
+  void magicBall.offsetWidth;
+  magicBall.classList.add("shake");
+  void magicBall.offsetWidth;
+  
+  
+  curFortune = Math.floor(Math.random() * fortunes.length);
+  setTimeout(() => {
+      var element = document.getElementById("fortune");
+      element.childNodes[0].nodeValue = fortunes[curFortune];}, 500);
+  
+}
+  </script>
+
+
+<button onClick="shake()">Shake</button>
+
+<div class="eightball">
+  <div class="corner"><span id="fortune">Guess Again</span></div>
+</div>
+</body>
+</html>
+
