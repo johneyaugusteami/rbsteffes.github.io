@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+           function Review( author, score, review){
+                this.author = author;
+                this.score = score;
+                this.review = review;
+                this.printObject = function (){ 
+                                document.write( "<p>" + this.author + "</p>");
+                                document.write( "<p>" + this.score + "</p>");
+                                document.write( "<p>" + this.review + "</p>");
+                                document.write( "<p>" + this.employer + "</p>");
+                           }
+            }
+            var review = []
+            review[0] = new Review("Ryan Steffes", "5 stars", "He is thoughtful");
+            Review.prototype.employer = "Wake Tech";
+            review[0].employer = "Wake Tech (Continuing Ed)";
+
+            review[1] = new Review("Norene Kemp", "5 stars", "She is thoughtful");
+
+            function changeMyObject(revObj) {
+                revObj.score = "Even more than 5 stars";
+            }
+
+           
+            review[0].printObject();
+            review[1].printObject();
+
+            changeMyObject(review[0]);
+
+            review[0].printObject();
+
+        
+            
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Our Example JavaScript</title>
+        <style>
+            .reviewCard{
+                border: 4px black outset;
+                width: 25%;
+                margin: auto 0;
+                padding: 1rem;
+                border-radius: 10px;
+            }
+            .reviewCardHeader{
+                width:50px;
+                height: 50px;
+                overflow:hidden;
+            }
+            .reviewCardHeader img{
+                max-width: 100%;
+            }
+            ul{
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+            }
+            .button-container{
+                display: flex;
+                justify-content: space-evenly;
+                width: 25%;
+                padding-top: 1rem;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="reviewCard">
+            <div class="reviewCardHeader">
+                <img src="" id="person-img" alt="Our reviews mean the world to us">
+            </div>
+            <h4 id="reviewer">Example Reviewer</h4>
+            <p id="job">Example</p>
+            <p id="review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis distinctio eius neque magnam dicta porro et exercitationem, ad ex a fugit saepe ipsam culpa libero earum nostrum quia alias cumque.</p>
+            <div class="button-container">
+                <button class="prev-btn" onclick="prevReview();">Prev</button>
+                <button class="next-btn" onclick="nextReview();">Next</button>
+            </div>
+        </div>
+        
+        <script src="js_objects_review.js">
+        </script>
+        
+    </body>
+</html>
