@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <main>
+        </main>
+
+        <script>
+            // Global variables
+            let myElements = [];
+            
+
+            function createNewBall(startTop, startLeft, color)
+            {
+
+                var mainElement = document.querySelector("main");
+                if(mainElement == null)
+                    {
+                        alert("Failure!");
+                    }
+                var newElement = document.createElement('div');
+
+                mainElement.style.width = "500px";
+                mainElement.style.backgroundColor = "lightblue";
+                mainElement.style.height = "500px";
+
+                newElement.style.position = "absolute";
+                newElement.style.top =  startTop + "px";
+                newElement.style.left = startLeft + "px";
+                newElement.style.width= "35px";
+                newElement.style.height= "35px";
+                newElement.style.backgroundColor = color;
+                newElement.style.borderRadius = "50%";
+
+                var newImage  = document.createElement('img');
+                newImage.src = "../images/wt-torch.png";
+                newImage.style.display = "block";
+                newImage.style.width="35px";
+                newImage.style.height="auto";
+
+                //newElement.appendChild(newImage);
+
+
+                //Eventually elements
+                mainElement.appendChild(newElement);
+                myElements.push(newElement);
+            }
+
+            function changeMyElements()
+            {
+                // change something here
+
+
+                window.requestAnimationFrame(changeMyElements);
+            }
+            
+            //Starting functions
+            ( function(){
+                createNewBall(25, 25, "red");
+                createNewBall(105, 105, "blue");
+
+                window.requestAnimationFrame(changeMyElements);
+
+            })();
+            
+
+        </script>
+    </body>
+</html>
