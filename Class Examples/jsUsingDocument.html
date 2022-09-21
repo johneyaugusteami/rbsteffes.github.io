@@ -10,6 +10,8 @@
         <script>
             // Global variables
             let myElements = [];
+            const MY_WINDOW_HEIGHT = 500;
+            let boolLTR = true, boolTTB = true;
             
 
             function createNewBall(startTop, startLeft, color)
@@ -22,9 +24,9 @@
                     }
                 var newElement = document.createElement('div');
 
-                mainElement.style.width = "500px";
+                mainElement.style.width = MY_WINDOW_HEIGHT + "px";
                 mainElement.style.backgroundColor = "lightblue";
-                mainElement.style.height = "500px";
+                mainElement.style.height = MY_WINDOW_HEIGHT + "px";
 
                 newElement.style.position = "absolute";
                 newElement.style.top =  startTop + "px";
@@ -51,14 +53,36 @@
             function changeMyElements()
             {
                 // change something here
+                myElements.forEach( element => {
+                    var myLeft = parseFloat(element.style.left);
+                    var myTop = parseFloat(element.style.top);
 
+                    myLeft += (boolLTR)? 10:-10;
+                    myTop += (boolTTB)? 10:-10;
+
+                    // Flip direction
+                    if(myLeft >= MY_WINDOW_HEIGHT || 
+                        myLeft <= 0){
+                        boolLTR = !boolLTR;
+                    }
+
+                    // Flip direction
+                    if(myTop >= MY_WINDOW_HEIGHT ||
+                        myTop <= 0){
+                        boolTTB = !boolTTB;
+                    }
+
+                    element.style.left = myLeft +"px";
+                    element.style.top = myTop +"px";
+
+                } );
 
                 window.requestAnimationFrame(changeMyElements);
             }
             
             //Starting functions
             ( function(){
-                createNewBall(25, 25, "red");
+                
                 createNewBall(105, 105, "blue");
 
                 window.requestAnimationFrame(changeMyElements);
