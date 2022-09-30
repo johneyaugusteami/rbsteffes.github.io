@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head></head>
+    <body>
+
+        <div id="MyDiv" >
+            <section id="MySection" >
+                <p id="MyParagraph">Some Text</p>
+            </section>
+        </div>
+
+        <script>
+            function someFunction(event)
+            {
+                alert("Alert message paragraph");
+                event.stopPropagation();
+                
+            }
+            function someFunctionSec()
+            {
+                alert("Alert message Section");
+                
+            }
+            function someFunctionDiv()
+            {
+                alert("Alert message Div");
+                
+            }
+            function someOtherFunction()
+            {
+                alert("Other message");
+                
+            }
+
+            let myPara = document.getElementById("MyParagraph");
+            myPara.addEventListener("click", someFunction, false);
+            let mySec = document.getElementById("MySection");
+            mySec.addEventListener("click", someFunctionSec, false);
+           
+            let myDiv = document.getElementById("MyDiv");
+            myDiv.addEventListener("click", someFunctionDiv, false);
+            
+
+           //myPara.onclick = someFunction;
+           
+            //myPara.onclick = someOtherFunction;
+
+
+          
+            //myPara.addEventListener("click", someOtherFunction);
+
+
+
+        </script>
+
+
+    </body>
+</html>
