@@ -423,6 +423,5 @@ server/node_modules/vary/index.js
 server/node_modules/vary/LICENSE
 server/node_modules/vary/package.json
 server/node_modules/vary/README.md
-server/node_js_server.js
 server/package-lock.json
 server/package.json
