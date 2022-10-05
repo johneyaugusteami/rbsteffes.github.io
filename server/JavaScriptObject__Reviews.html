@@ -2,6 +2,9 @@
 <html lang="en">
     <head>
         <title>Our Example JavaScript</title>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        
         <style>
             .reviewCard{
                 border: 4px black outset;
@@ -34,15 +37,28 @@
     </head>
     <body>
         <div class="reviewCard">
-            <div class="reviewCardHeader">
-                <img src="" id="person-img" alt="Our reviews mean the world to us">
+            <div id="reviewDisplay">
+                <div class="reviewCardHeader">
+                    <img src="" id="person-img" alt="Our reviews mean the world to us">
+                </div>
+                <h4 id="reviewer">Example Reviewer</h4>
+                <p id="job">Example</p>
+                <p id="review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis distinctio eius neque magnam dicta porro et exercitationem, ad ex a fugit saepe ipsam culpa libero earum nostrum quia alias cumque.</p>
+                <div class="button-container">
+                    <button class="prev-btn" onclick="prevReview();">Prev</button>
+                    <button class="next-btn" onclick="nextReview();">Next</button>
+                    <button class="new-btn" onclick="newReview();">New</button>
+                    <button class="delete-btn" onclick="deleteReview();">Delete</button>
+
+                </div>
             </div>
-            <h4 id="reviewer">Example Reviewer</h4>
-            <p id="job">Example</p>
-            <p id="review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis distinctio eius neque magnam dicta porro et exercitationem, ad ex a fugit saepe ipsam culpa libero earum nostrum quia alias cumque.</p>
-            <div class="button-container">
-                <button class="prev-btn" onclick="prevReview();">Prev</button>
-                <button class="next-btn" onclick="nextReview();">Next</button>
+            <div id="reviewInput">
+                <form>
+                    <label for="revName"> Name: <input id="revName"></label>
+                    <label for="revJob">  Job Title:<input id="revJob"></label>
+                    <label for="revReview">  Review:<textarea id="revTextReview" ></textarea></label>
+                    <button class="save-btn" onclick="saveReview();">Save Review</button>
+                </form>
             </div>
         </div>
         
